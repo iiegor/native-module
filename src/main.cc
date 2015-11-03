@@ -26,8 +26,7 @@ void App(const Nan::FunctionCallbackInfo<Value>& info) {
   Nan::Set(
     result,
     Nan::New<String>("exitCode").ToLocalChecked(),
-    Nan::New<Integer>(code)
-  );
+    Nan::New<Integer>(code));
 
   /**
    * Return the previously created object
@@ -39,6 +38,6 @@ void Init(Handle<Object> exports) {
   Nan::SetMethod(exports, "app", App);
 }
 
-} // namespace
+}  // namespace
 
 NODE_MODULE(app, Init)

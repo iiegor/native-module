@@ -9,4 +9,4 @@ bool App(const std::string& command, int* code) {
   return true;
 }
 
-} // namespace
+}  // namespace

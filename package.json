@@ -1,9 +1,9 @@
 {
-  "main": "./lib/app.js",
+  "main": "./lib/main.js",
   "name": "app",
   "version": "0.0.1-dev",
   "scripts": {
-    "prepublish": "grunt coffee"
+    "prepublish": "grunt clean coffee"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
