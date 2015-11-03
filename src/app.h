@@ -6,7 +6,7 @@
 
 namespace app {
 
-bool App(const std::string& command);
+bool App(const std::string& command, int* code);
 
 }  // namespace runas
 
