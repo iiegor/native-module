@@ -3,7 +3,7 @@
   "name": "app",
   "version": "0.0.1-dev",
   "scripts": {
-    "prepublish": "grunt clean coffee"
+    "prepublish": "grunt coffee"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
