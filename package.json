@@ -1,0 +1,19 @@
+{
+  "main": "./lib/app.js",
+  "name": "app",
+  "version": "0.0.1-dev",
+  "scripts": {
+    "prepublish": "grunt coffee"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-coffee": "~0.6.6",
+    "grunt-cli": "~0.1.7",
+    "grunt-shell": "~0.2.2",
+    "coffee-script": "~1.6.2",
+    "node-cpplint": "~0.1.5"
+  },
+  "dependencies": {
+    "nan": "2.x"
+  }
+}
