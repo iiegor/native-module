@@ -20,8 +20,7 @@ void App(const Nan::FunctionCallbackInfo<Value>& info) {
   app::App(command, &code);
 
   /**
-   * Create an object
-   * {exitCode: 1}
+   * Create an object and set the code value
    */
   Local<Object> result = Nan::New<Object>();
   Nan::Set(
