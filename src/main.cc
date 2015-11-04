@@ -6,7 +6,8 @@ void Init(Handle<Object> exports) {
   CommonInit();
   PlatformInit();
 
-  Nan::SetMethod(exports, "mouse", Mouse);
+  Nan::SetMethod(exports, "watch", Watch);
+  Nan::SetMethod(exports, "setPosition", SetPosition);
 }
 
 }  // namespace
