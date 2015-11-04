@@ -5,6 +5,7 @@
 using namespace v8;
 
 void CommonInit();
+void PlatformInit();
 NAN_METHOD(Mouse);
 
 #endif  // SRC_COMMON_H_

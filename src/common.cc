@@ -21,13 +21,13 @@ NAN_METHOD(Mouse) {
   /**
    * Create an object and set the code value
    */
-  Local<Object> result = Nan::New<v8::Object>();
+  Local<Object> result = Nan::New<Object>();
   result->Set(
-    Nan::New<v8::String>("command").ToLocalChecked(),
-    Nan::New<v8::String>(command).ToLocalChecked());
+    Nan::New<String>("command").ToLocalChecked(),
+    Nan::New<String>(command).ToLocalChecked());
   result->Set(
-    Nan::New<v8::String>("exitCode").ToLocalChecked(),
-    Nan::New<v8::Integer>(exit_code));
+    Nan::New<String>("exitCode").ToLocalChecked(),
+    Nan::New<Integer>(exit_code));
 
   /**
    * Return the previously created object

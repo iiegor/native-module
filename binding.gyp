@@ -13,7 +13,8 @@
         ['OS=="win"', {
           'sources': [
             'src/mouse_win.cc'
-          ]
+          ],
+          'msvs_disabled_warnings': [],
         }],
       ],
     }

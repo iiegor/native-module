@@ -4,6 +4,7 @@ namespace {
 
 void Init(Handle<Object> exports) {
   CommonInit();
+  PlatformInit();
 
   Nan::SetMethod(exports, "mouse", Mouse);
 }
