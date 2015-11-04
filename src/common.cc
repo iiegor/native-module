@@ -2,7 +2,7 @@
 
 void CommonInit() { }
 
-NAN_METHOD(Watch) {
+NAN_METHOD(SetWatchCallback) {
   Nan::HandleScope scope;
 
   /**

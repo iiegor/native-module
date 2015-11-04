@@ -6,7 +6,7 @@ using namespace v8;
 
 void CommonInit();
 void PlatformInit();
-NAN_METHOD(Watch);
+NAN_METHOD(SetWatchCallback);
 NAN_METHOD(SetPosition);
 
 #endif  // SRC_COMMON_H_

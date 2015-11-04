@@ -6,7 +6,7 @@ void Init(Handle<Object> exports) {
   CommonInit();
   PlatformInit();
 
-  Nan::SetMethod(exports, "watch", Watch);
+  Nan::SetMethod(exports, "setWatchCallback", SetWatchCallback);
   Nan::SetMethod(exports, "setPosition", SetPosition);
 }
 
