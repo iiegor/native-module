@@ -1,6 +1,6 @@
-binding = require '../build/Release/app.node'
+binding = require '../build/Release/mouse.node'
 
 ###
-@spec {exitCode: 1}
+@spec Object {command: string, exitCode: int}
 ###
-console.log binding.app('detectMouseMovement')
+console.log binding.mouse('detectMouseMovement')

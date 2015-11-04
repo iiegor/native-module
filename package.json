@@ -1,6 +1,6 @@
 {
   "main": "./lib/main.js",
-  "name": "app",
+  "name": "node-mouse",
   "version": "0.0.1-dev",
   "scripts": {
     "prepublish": "grunt coffee"

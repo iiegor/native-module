@@ -2,7 +2,7 @@
 
 void CommonInit() { }
 
-NAN_METHOD(App) {
+NAN_METHOD(Mouse) {
   Nan::HandleScope scope;
 
   /**
@@ -16,6 +16,7 @@ NAN_METHOD(App) {
    * Convert first argument to string
    */
   std::string command(*String::Utf8Value(info[0]));
+  int exit_code = -1;
 
   /**
    * Create an object and set the code value
@@ -25,8 +26,8 @@ NAN_METHOD(App) {
     Nan::New<v8::String>("command").ToLocalChecked(),
     Nan::New<v8::String>(command).ToLocalChecked());
   result->Set(
-    Nan::New<v8::String>("code").ToLocalChecked(),
-    Nan::New<v8::Integer>(1));
+    Nan::New<v8::String>("exitCode").ToLocalChecked(),
+    Nan::New<v8::Integer>(exit_code));
 
   /**
    * Return the previously created object

@@ -5,9 +5,9 @@ namespace {
 void Init(Handle<Object> exports) {
   CommonInit();
 
-  Nan::SetMethod(exports, "app", App);
+  Nan::SetMethod(exports, "mouse", Mouse);
 }
 
 }  // namespace
 
-NODE_MODULE(app, Init)
+NODE_MODULE(mouse, Init)
