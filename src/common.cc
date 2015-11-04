@@ -1,8 +1,5 @@
 #include "common.h"
 
-// Move to mouse_win.cc
-#include <windows.h>
-
 void CommonInit() { }
 
 NAN_METHOD(Watch) {
@@ -36,18 +33,4 @@ NAN_METHOD(Watch) {
    * Return the previously created object
    */
   info.GetReturnValue().Set(result);
-}
-
-NAN_METHOD(SetPosition) {
-  Nan::HandleScope scope;
-
-  /**
-   * Check arguments type
-   */
-  /*if (!info[0]->IsInteger() || !info[1]->IsInteger())
-    return Nan::ThrowTypeError("Integer requried");*/
-
-  SetCursorPos(12, 12);
-
-  return;
 }
