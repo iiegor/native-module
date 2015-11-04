@@ -1,6 +1,6 @@
 binding = require '../build/Release/mouse.node'
 
 ###
-@desc Set's mouse position to x: 0 y: 0
+@desc Set's mouse position to x: 10 y: 10
 ###
-binding.setPosition(0, 0)
+binding.setPosition(10, 10)
