@@ -4,6 +4,10 @@
 #include "nan.h"
 using namespace v8;
 
+#ifdef _WIN32
+void PlatformSetPosition(const int x, const int y);
+#endif
+
 void CommonInit();
 void PlatformInit();
 NAN_METHOD(SetCallback);
