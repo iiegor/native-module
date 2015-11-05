@@ -9,4 +9,5 @@ $ grunt coffee
 
 ## API
 ``setPosition`` *Set cursor position*
+
 ``setCallback(callback)`` *Set mouse event handler*
