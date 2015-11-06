@@ -5,9 +5,10 @@ class Mouse extends EventEmitter
   setPosition: binding.setPosition
   getPosition: binding.getPosition
   setCallback: binding.setCallback
+  watch: binding.watch
 
   registerIdleHandler: (time, cb) ->
-    binding.setCallback(cb)
-    binding.watch(time)
+    @setCallback(cb)
+    @watch(time)
 
 module.exports = new Mouse
