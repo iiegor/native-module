@@ -42,7 +42,7 @@ NAN_METHOD(SetPosition) {
    * Check arguments type
    */
   if (!info[0]->IsUint32() || !info[1]->IsUint32())
-    return Nan::ThrowTypeError("A number is required");
+    return Nan::ThrowTypeError("Arguments must be numbers");
 
   /**
    * Set cursor position using given coords
@@ -50,4 +50,22 @@ NAN_METHOD(SetPosition) {
   PlatformSetPosition(info[0]->Uint32Value(), info[1]->Uint32Value());
 
   return;
+}
+
+NAN_METHOD(GetPosition) {
+  Nan::HandleScope scope;
+
+  /**
+   * Get current cursor position
+   */
+  POINT pt = PlatformGetPosition();
+
+  Local<Array> array = Nan::New<Array>(2);
+  array->Set(0, Nan::New<Uint32>(pt.x));
+  array->Set(1, Nan::New<Uint32>(pt.y));
+
+  /**
+   * Return x, y to handle function
+   */
+  info.GetReturnValue().Set(array);
 }

@@ -8,6 +8,7 @@ void Init(Handle<Object> exports) {
 
   Nan::SetMethod(exports, "setCallback", SetCallback);
   Nan::SetMethod(exports, "setPosition", SetPosition);
+  Nan::SetMethod(exports, "getPosition", GetPosition);
 }
 
 }  // namespace
