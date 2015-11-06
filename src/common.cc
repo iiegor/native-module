@@ -27,7 +27,7 @@ NAN_METHOD(SetCallback) {
     Nan::New<String>(command).ToLocalChecked());
   result->Set(
     Nan::New<String>("exitCode").ToLocalChecked(),
-    Nan::New<Integer>(exit_code)); 
+    Nan::New<Integer>(exit_code));
 
   /**
    * Return the previously created object
@@ -60,6 +60,9 @@ NAN_METHOD(GetPosition) {
    */
   POINT pt = PlatformGetPosition();
 
+  /**
+   * Create an object containing x and y values
+   */
   Local<Object> result = Nan::New<Object>();
   result->Set(
     Nan::New<String>("x").ToLocalChecked(),
@@ -69,7 +72,7 @@ NAN_METHOD(GetPosition) {
     Nan::New<Uint32>(pt.y));
 
   /**
-   * Return x, y to handle function
+   * Return the object
    */
   info.GetReturnValue().Set(result);
 }
