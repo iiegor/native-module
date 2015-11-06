@@ -61,10 +61,12 @@ NAN_METHOD(GetPosition) {
   POINT pt = PlatformGetPosition();
 
   Local<Object> result = Nan::New<Object>();
-  result->Set(Nan::New<String>("x").ToLocalChecked(),
-              Nan::New<Uint32>(pt.x));
-  result->Set(Nan::New<String>("y").ToLocalChecked(),
-              Nan::New<Uint32>(pt.y));
+  result->Set(
+    Nan::New<String>("x").ToLocalChecked(),
+    Nan::New<Uint32>(pt.x));
+  result->Set(
+    Nan::New<String>("y").ToLocalChecked(),
+    Nan::New<Uint32>(pt.y));
 
   /**
    * Return x, y to handle function
