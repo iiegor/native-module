@@ -60,12 +60,14 @@ NAN_METHOD(GetPosition) {
    */
   POINT pt = PlatformGetPosition();
 
-  Local<Array> array = Nan::New<Array>(2);
-  array->Set(0, Nan::New<Uint32>(pt.x));
-  array->Set(1, Nan::New<Uint32>(pt.y));
+  Local<Object> result = Nan::New<Object>();
+  result->Set(Nan::New<String>("x").ToLocalChecked(),
+              Nan::New<Uint32>(pt.x));
+  result->Set(Nan::New<String>("y").ToLocalChecked(),
+              Nan::New<Uint32>(pt.y));
 
   /**
    * Return x, y to handle function
    */
-  info.GetReturnValue().Set(array);
+  info.GetReturnValue().Set(result);
 }
