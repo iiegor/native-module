@@ -12,4 +12,4 @@ $ grunt coffee
 
 ``getPosition()`` *Get cursor position*
 
-``setCallback(callback)`` *Set mouse event handler*
+``registerIdleHandler(time, callback)`` *Handles mouse ``EVENT_IDLE``*

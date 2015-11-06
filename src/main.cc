@@ -3,12 +3,10 @@
 namespace {
 
 void Init(Handle<Object> exports) {
-  CommonInit();
-  PlatformInit();
-
   Nan::SetMethod(exports, "setCallback", SetCallback);
   Nan::SetMethod(exports, "setPosition", SetPosition);
   Nan::SetMethod(exports, "getPosition", GetPosition);
+  Nan::SetMethod(exports, "watch", Watch);
 }
 
 }  // namespace

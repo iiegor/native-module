@@ -2,8 +2,6 @@
 
 static Nan::Persistent<Function> g_callback;
 
-void CommonInit() { }
-
 NAN_METHOD(SetCallback) {
   Nan::HandleScope scope;
 
@@ -12,6 +10,19 @@ NAN_METHOD(SetCallback) {
 
   g_callback.Reset(Local<Function>::Cast(info[0]));
   return;
+}
+
+NAN_METHOD(Watch) {
+  Nan::HandleScope scope;
+
+  if (!info[0]->IsUint32())
+    return Nan::ThrowTypeError("Sleep time is required");
+
+  /**
+   * ...
+   * PlatformWatch();
+   */
+  PlatformWatch(info[0]->Uint32Value());
 }
 
 NAN_METHOD(SetPosition) {
@@ -54,4 +65,23 @@ NAN_METHOD(GetPosition) {
    * Return the object
    */
   info.GetReturnValue().Set(result);
+}
+
+void PostEvent(EVENT_TYPE evt_type) {
+  if (!g_callback.IsEmpty()) {
+    Handle<String> type;
+    switch (evt_type) {
+      case EVENT_IDLE:
+        type = Nan::New("idle").ToLocalChecked();
+        break;
+      default:
+        type = Nan::New("unknown").ToLocalChecked();
+        return;
+    }
+
+    Handle<Value> argv[] = {
+      type,
+    };
+    Nan::New(g_callback)->Call(Nan::GetCurrentContext()->Global(), 1, argv);
+  }
 }

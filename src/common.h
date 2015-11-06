@@ -4,15 +4,23 @@
 #include "nan.h"
 using namespace v8;
 
-#ifdef _WIN32
+enum EVENT_TYPE {
+  EVENT_NONE,
+  EVENT_IDLE,
+};
+
+// Platform methods
 void PlatformSetPosition(const int x, const int y);
 POINT PlatformGetPosition();
-#endif
+void PlatformWatch(uint32_t sleep_time);
 
-void CommonInit();
-void PlatformInit();
+// Common methods
+void PostEvent(EVENT_TYPE type);
+
+// Nan methods
 NAN_METHOD(SetCallback);
 NAN_METHOD(SetPosition);
 NAN_METHOD(GetPosition);
+NAN_METHOD(Watch);
 
 #endif  // SRC_COMMON_H_
