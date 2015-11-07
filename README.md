@@ -3,7 +3,7 @@ This is a node native-module created (for learning purposes) to provide native u
 
 ## Installing
 ```bash
-$ npm install node-mouse
+$ npm install iiegor/node-mouse
 ```
 
 ## Building
