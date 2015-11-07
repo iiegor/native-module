@@ -1,6 +1,11 @@
 # node-mouse
 This is a node native-module created (for learning purposes) to provide native utilities for cursor :smiley:
 
+## Installing
+```bash
+$ npm install node-mouse
+```
+
 ## Building
 ```bash
 $ npm install
