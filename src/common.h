@@ -13,6 +13,7 @@ enum EVENT_TYPE {
 void PlatformSetPosition(const int x, const int y);
 POINT PlatformGetPosition();
 void PlatformWatch(uint32_t sleep_time);
+void PlatformClick(int type);
 
 // Common methods
 void PostEvent(EVENT_TYPE type);
@@ -22,5 +23,6 @@ NAN_METHOD(SetCallback);
 NAN_METHOD(SetPosition);
 NAN_METHOD(GetPosition);
 NAN_METHOD(Watch);
+NAN_METHOD(Click);
 
 #endif  // SRC_COMMON_H_

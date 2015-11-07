@@ -6,6 +6,7 @@ void Init(Handle<Object> exports) {
   Nan::SetMethod(exports, "setCallback", SetCallback);
   Nan::SetMethod(exports, "setPosition", SetPosition);
   Nan::SetMethod(exports, "getPosition", GetPosition);
+  Nan::SetMethod(exports, "click", Click);
   Nan::SetMethod(exports, "watch", Watch);
 }
 

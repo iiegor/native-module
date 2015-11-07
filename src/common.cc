@@ -67,6 +67,20 @@ NAN_METHOD(GetPosition) {
   info.GetReturnValue().Set(result);
 }
 
+NAN_METHOD(Click) {
+  Nan::HandleScope scope;
+
+  if (!info[0]->IsInt32()) {
+    Nan::ThrowTypeError("Click type must be an integer");
+    return;
+  }
+
+  int type = info[0]->Int32Value();
+  PlatformClick(type);
+
+  return;
+}
+
 void PostEvent(EVENT_TYPE evt_type) {
   if (!g_callback.IsEmpty()) {
     Handle<String> type;

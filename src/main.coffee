@@ -6,6 +6,7 @@ class Mouse extends EventEmitter
   getPosition: binding.getPosition
   setCallback: binding.setCallback
   watch: binding.watch
+  click: binding.click
 
   registerIdleHandler: (time, cb) ->
     @setCallback(cb)
