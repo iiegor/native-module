@@ -13,8 +13,12 @@ POINT PlatformGetPosition() {
   return pt;
 }
 
+void PlatformClick() {
+
+}
+
 void PlatformWatch(uint32_t sleep_time) {
-  POINT lastPt = PlatformGetPosition();
+  POINT lastPt, pt;
 
   /**
    * Watch for idle
@@ -22,7 +26,7 @@ void PlatformWatch(uint32_t sleep_time) {
   while (true) {
     Sleep(sleep_time);
 
-    POINT pt = PlatformGetPosition();
+    pt = PlatformGetPosition();
 
     if (pt.x == lastPt.x && pt.y == lastPt.y) {
       EVENT_TYPE event = EVENT_IDLE;
