@@ -18,3 +18,5 @@ $ grunt coffee
 ``getPosition()`` *Get cursor position*
 
 ``registerIdleHandler(time, callback)`` *Handle mouse ``EVENT_IDLE``*
+
+``click(type)`` *Mouse click*
