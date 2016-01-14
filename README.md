@@ -1,6 +1,8 @@
 # node-mouse
 This is a node native-module created (for learning purposes) to provide native utilities for cursor :smiley:
 
+:warning: This is currently under extremely active development, and you probably shouldn't use it unless you like broken software.
+
 ## Installing
 ```bash
 $ npm install iiegor/node-mouse
