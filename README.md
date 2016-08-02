@@ -17,10 +17,30 @@ $ grunt coffee
 
 ## API
 
-#### ``setPosition(x, y)`` 
+#### ``setPosition(x, y)``
+
+```javascript
+mouse.setPosition(300, 250)
+```
 
 #### ``getPosition()``
 
+```javascript
+mouse.getPosition() //=> {x, y}
+```
+
 #### ``registerIdleHandler(time, callback)``
 
+```javascript
+// Will be called after 6 seconds of inactivity
+mouse.registerIdleHandle(6000, (type) => {
+  console.log(type) //=> idle
+})
+```
+
 #### ``click(type)``
+
+```javascript
+mouse.click(/*left click*/1)
+mouse.click(/*right click*/2)
+```
