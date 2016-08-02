@@ -11,8 +11,7 @@ $ npm install iiegor/node-mouse
 
 ## Building
 ```bash
-$ npm install
-$ grunt coffee
+$ grunt
 ```
 
 ## API
