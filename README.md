@@ -1,5 +1,6 @@
 # node-mouse
-This is a node native-module created (for learning purposes) to provide native utilities for cursor :smiley:
+
+This is a node native-module created to provide cross-platform mouse utilities :smiley:
 
 :warning: This is currently under extremely active development, and you probably shouldn't use it unless you like broken software.
 
@@ -15,10 +16,11 @@ $ grunt coffee
 ```
 
 ## API
-``setPosition(x, y)`` *Set cursor position*
 
-``getPosition()`` *Get cursor position*
+### ``setPosition(x, y)`` 
 
-``registerIdleHandler(time, callback)`` *Handle mouse ``EVENT_IDLE``*
+### ``getPosition()``
 
-``click(type)`` *Mouse click*
+### ``registerIdleHandler(time, callback)``
+
+### ``click(type)``
