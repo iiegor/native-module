@@ -17,10 +17,10 @@ $ grunt coffee
 
 ## API
 
-### ``setPosition(x, y)`` 
+#### ``setPosition(x, y)`` 
 
-### ``getPosition()``
+#### ``getPosition()``
 
-### ``registerIdleHandler(time, callback)``
+#### ``registerIdleHandler(time, callback)``
 
-### ``click(type)``
+#### ``click(type)``
