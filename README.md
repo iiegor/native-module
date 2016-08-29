@@ -32,7 +32,7 @@ mouse.getPosition() //=> {x, y}
 
 ```javascript
 // Will be called after 6 seconds of inactivity
-mouse.registerIdleHandle(6000, (type) => {
+mouse.registerIdleHandler(6000, (type) => {
   console.log(type) //=> idle
 })
 ```
