@@ -40,6 +40,6 @@ mouse.registerIdleHandler(6000, (type) => {
 #### ``click(type)``
 
 ```javascript
-mouse.click(/*left click*/1)
-mouse.click(/*right click*/2)
+mouse.click(1) //=> left click
+mouse.click(2) //=> right click
 ```
